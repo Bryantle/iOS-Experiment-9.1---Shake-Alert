@@ -9,7 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake{
+            let chicken = UIAlertController(title: nil, message: "Stop Shaking", preferredStyle: UIAlertControllerStyle.alert)
+            chicken.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+            self.present(chicken, animated: true, completion: nil)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
