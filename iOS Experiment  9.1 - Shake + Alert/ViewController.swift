@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     }
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake{
-            let chicken = UIAlertController(title: nil, message: "Stop Shaking", preferredStyle: UIAlertControllerStyle.alert)
-            chicken.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
-            self.present(chicken, animated: true, completion: nil)
+            let noodle = UIAlertController(title: nil, message: "Stop Shaking", preferredStyle: UIAlertControllerStyle.alert)
+            noodle.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
+            self.present(noodle, animated: true, completion: nil)
         }
     }
     override func viewDidLoad() {
@@ -31,4 +31,4 @@ class ViewController: UIViewController {
 
 
 }
-
+// When there is a motion event and the event is a shake, rather than changing the text of a label, now it triggers an alert notification by creating a UIAlertController instance, adding an action to dismiss the instance notification, and finally presenting all this to the user. 
